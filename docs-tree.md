@@ -22,3 +22,11 @@
 │   └── img   
 ├── tsconfig.json   
 └── yarn.lock   
+
+---
+```
+---
+id: my-home-doc # 设置docs文件下面的.md为新的唯一id
+slug: 设置访问该页面的新的path地址
+---
+```
