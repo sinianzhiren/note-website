@@ -17,16 +17,17 @@ const config = {
   projectName: 'docusaurus', // Usually your repo name.
 
   i18n: {
-    defaultLocale: 'zh-cn',
-    locales: ['zh-cn'],
+    defaultLocale: 'zh-CN',
+    locales: ['zh-CN'],
     localeConfigs: {
-      'zh-cn': {
+      'zh-CN': {
         label: '中文（中国）',
         direction: 'ltr',
       },
     }
   },
 
+  // 预设
   presets: [
     [
       'classic',
@@ -50,11 +51,13 @@ const config = {
     ],
   ],
 
+  // 主题设置
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      hideableSidebar: true,
       navbar: {
-        title: 'My Site',
+        title: 'My Blog',
         logo: {
           alt: 'My Site Logo',
           src: 'img/logo.svg',
@@ -64,9 +67,9 @@ const config = {
             type: 'doc',
             docId: 'intro',
             position: 'left',
-            label: 'Tutorial',
+            label: '开始',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          {to: '/blog', label: '博客', position: 'left'},
           {
             href: 'https://github.com/facebook/docusaurus',
             label: 'GitHub',
@@ -78,16 +81,16 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: '文档',
             items: [
               {
-                label: 'Tutorial',
+                label: '开始',
                 to: '/docs/intro',
               },
             ],
           },
           {
-            title: 'Community',
+            title: '社区',
             items: [
               {
                 label: 'Stack Overflow',
@@ -104,7 +107,7 @@ const config = {
             ],
           },
           {
-            title: 'More',
+            title: '更多',
             items: [
               {
                 label: 'Blog',

@@ -1,4 +1,5 @@
 ---
+title: 站点翻译
 sidebar_position: 2
 ---
 
