@@ -1,7 +1,8 @@
 ---
-title: 数据结构index
+title: 数据结构
 ---
 
+## 链表
 ```javascript
 function Node(el) {
   this.node = el;
