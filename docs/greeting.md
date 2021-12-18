@@ -1,5 +1,5 @@
 ---
-title: hello greeting page
+title: 问候
 tags:
   - Demo
   - Getting started

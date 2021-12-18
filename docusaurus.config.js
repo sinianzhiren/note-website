@@ -16,16 +16,16 @@ const config = {
   organizationName: 'facebook', // Usually your GitHub org/user name.
   projectName: 'docusaurus', // Usually your repo name.
 
-  // i18n: {
-  //   defaultLocale: 'zh-cn',
-  //   locales: ['zh-cn'],
-  //   localeConfigs: {
-  //     'zh-cn': {
-  //       label: '中文（中国）',
-  //       direction: 'ltr',
-  //     },
-  //   }
-  // },
+  i18n: {
+    defaultLocale: 'zh-CN',
+    locales: ['zh-CN'],
+    localeConfigs: {
+      'zh-CN': {
+        label: '中文（中国）',
+        direction: 'ltr',
+      },
+    }
+  },
 
   // 预设
   presets: [
@@ -81,16 +81,16 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: '文档',
             items: [
               {
-                label: 'Tutorial',
+                label: '开始',
                 to: '/docs/intro',
               },
             ],
           },
           {
-            title: 'Community',
+            title: '社区',
             items: [
               {
                 label: 'Stack Overflow',
@@ -107,7 +107,7 @@ const config = {
             ],
           },
           {
-            title: 'More',
+            title: '更多',
             items: [
               {
                 label: 'Blog',
