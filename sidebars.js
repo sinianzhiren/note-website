@@ -15,7 +15,7 @@
 const sidebars = {
   docs: [
     "intro",
-    "greeting",
+    "shortcut-keyboard",
     {
       type: "category",
       label: '基础扩展',
