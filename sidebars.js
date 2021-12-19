@@ -15,7 +15,11 @@
 const sidebars = {
   docs: [
     "intro",
-    "shortcut-keyboard",
+    {
+      type: 'doc',
+      id: 'shortcut-keyboard',
+      label: '快捷键'
+    },
     {
       type: "category",
       label: '基础扩展',
@@ -70,7 +74,8 @@ const sidebars = {
           collapsed: true,
           collapsible: true,
           items: [
-            "data-structure-algorithm/data-structure/array"
+            "data-structure-algorithm/data-structure/array",
+            "data-structure-algorithm/data-structure/binary-tree"
           ]
         },
         {
