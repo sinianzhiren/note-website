@@ -55,3 +55,7 @@ tags:
 > - cmd + n `新建一个应用的窗口`
 > - cmd + t `新建一个tab标签页`  
 > - [更多的快捷键](https://www.cnblogs.com/s496987839/p/5068015.html)
+
+## 参考链接
+
+- [WebStorm常用快捷键](https://www.cnblogs.com/gkl2013/p/7201589.html)
