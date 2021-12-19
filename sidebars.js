@@ -83,7 +83,8 @@ const sidebars = {
           collapsible: true,
           collapsed: true,
           items: [
-            "data-structure-algorithm/front-algorithm/sort"
+            "data-structure-algorithm/front-algorithm/sort",
+            "data-structure-algorithm/front-algorithm/string",
           ]
         }
       ]
