@@ -69,5 +69,3 @@ const hasGroupsSizeX = function(deck) {
 // 最后一个数即所求
   return array[0] > 1;
 };
-
-console.log(hasGroupsSizeX([1,3,4,4,3,2,1]));
