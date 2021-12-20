@@ -41,9 +41,7 @@ const getCompose = (num) => {
 // eg: [1, 1, 2, 2, 2, 2]
 // res: true ([[1, 1], [2, 2], [2, 2]])
 const hasGroupsSizeX = function(deck) {
-  var arr = deck.sort((a, b) => a - b);
-  let min = Number.MAX_SAFE_INTEGER;
-  let result = true;
+  const arr = deck.sort((a, b) => a - b);
 
   if (arr.length < 2) return false;
 
