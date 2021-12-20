@@ -41,9 +41,7 @@ const getCompose = (num) => {
 // eg: [1, 1, 2, 2, 2, 2]
 // res: true ([[1, 1], [2, 2], [2, 2]])
 const hasGroupsSizeX = function(deck) {
-  var arr = deck.sort((a, b) => a - b);
-  let min = Number.MAX_SAFE_INTEGER;
-  let result = true;
+  const arr = deck.sort((a, b) => a - b);
 
   if (arr.length < 2) return false;
 
@@ -71,5 +69,3 @@ const hasGroupsSizeX = function(deck) {
 // 最后一个数即所求
   return array[0] > 1;
 };
-
-console.log(hasGroupsSizeX([1,3,4,4,3,2,1]));
