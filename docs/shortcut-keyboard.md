@@ -7,7 +7,12 @@ tags:
 ---
 
 > *[]: 方括号内表示可选的操作，一般加上后等于相反的操作*  
-> */: 斜线表示或的意思*
+> */: 斜线表示或的意思*  
+> Command（或 Cmd）⌘  
+  Shift ⇧  
+  Option（或 Alt）⌥    
+  Control（或 Ctrl）⌃  
+  Caps Lock ⇪   
 
 ## Mac
 > - cmd + Tab `切换应用程序`

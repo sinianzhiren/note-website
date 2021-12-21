@@ -93,6 +93,18 @@ const sidebars = {
           ]
         }
       ]
+    },
+    {
+      type: "category",
+      label: '手写代码',
+      link: {
+        type: "generated-index"
+      },
+      collapsed: true,
+      collapsible: true,
+      items: [
+        "write-code/promise"
+      ]
     }
   ]
   // By default, Docusaurus generates a sidebar from the docs folder structure
