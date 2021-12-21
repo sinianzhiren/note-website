@@ -106,6 +106,18 @@ const sidebars = {
         "write-code/promise",
         "write-code/call-bind-new-apply"
       ]
+    },
+    {
+      type: "category",
+      label: '前端基础',
+      link: {
+        type: "generated-index"
+      },
+      collapsible: true,
+      collapsed: true,
+      items: [
+        "front-base/ES6"
+      ]
     }
   ]
   // By default, Docusaurus generates a sidebar from the docs folder structure
