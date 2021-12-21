@@ -103,7 +103,8 @@ const sidebars = {
       collapsed: true,
       collapsible: true,
       items: [
-        "write-code/promise"
+        "write-code/promise",
+        "write-code/call-bind-new-apply"
       ]
     }
   ]

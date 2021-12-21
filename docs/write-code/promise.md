@@ -1,8 +1,7 @@
 ---
-title: 手写promise
+title: promise
 ---
 
-## promise
 > - 注意：resolve和reject函数中的this需要在外面声明this，因为比如示例中的resolve或者reject在setTimeout 中调用，那么内部的this指向的是window
 
 ```javascript
