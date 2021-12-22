@@ -44,7 +44,10 @@ Function.prototype.bind = function (ctx, ...params) {
   const fn = this;
   ctx = ctx || window;
 
-  return function (...args) {
+  return function F(...args) {
+    if (this instanceof F) {
+      return new fn(...params, ...args);
+    }
     return fn.apply(ctx, params.concat(args));
   }
 };

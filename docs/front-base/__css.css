@@ -1,0 +1,77 @@
+/*定宽高*/
+.wp {
+  position: relative;
+}
+
+.box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -50px;
+}
+
+/*or*/
+
+.box {
+  position: absolute;
+  left: calc(50% - 50px);
+  top: calc(50% - 50px);
+}
+
+.box {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+/*不指定宽高*/
+
+.box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.wp {
+  line-height: 300px;
+  text-align: center;
+  font-size: 0;
+}
+.box {
+  font-size: 16px;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: inherit;
+  /*修正文字*/
+  text-align: left;
+}
+
+.wp {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.box {
+  display: inline-block;
+}
+
+.wp {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.wp {
+  display: grid;
+}
+
+.box {
+  align-self: center;
+  justify-self: center;
+}

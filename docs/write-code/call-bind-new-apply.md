@@ -3,13 +3,16 @@ title: bind,new,call,apply
 ---
 
 ## bind
-
+> 注意：这里bind返回的函数可以通过两种方式执行，1. 直接调用，2. 通过new 操作符；需要加以判断
 ```javascript
 Function.prototype.bind = function (ctx, ...params) {
   const fn = this;
   ctx = ctx || window;
 
-  return function (...args) {
+  return function F(...args) {
+    if (this instanceof F) {
+      return new fn(...params, ...args);
+    } 
     return fn.apply(ctx, params.concat(args));
   }
 };
@@ -45,6 +48,10 @@ Function.prototype.apply = function (ctx, params) {
 ```
 
 ## new
+> 1. 首先创建一个对象，这个对象作为执行构造函数返回的实例；
+> 2. 将对象的原型(__proto__)指向构造函数的原型(prototype)
+> 3. 将这个空对象作为构造函数中的this(使用apply, call, bind)，执行构造函数
+> 4. 根据构造函数的结果，返回构造函数的结果或者首先创建的对象(三目运算符)
 
 ```javascript
 const selfNew = function (ConstructFn, ...params) {
