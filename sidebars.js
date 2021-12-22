@@ -75,7 +75,8 @@ const sidebars = {
           collapsible: true,
           items: [
             "data-structure-algorithm/data-structure/array",
-            "data-structure-algorithm/data-structure/binary-tree"
+            "data-structure-algorithm/data-structure/binary-tree",
+            "data-structure-algorithm/data-structure/stack",
           ]
         },
         {
@@ -116,7 +117,9 @@ const sidebars = {
       collapsible: true,
       collapsed: true,
       items: [
-        "front-base/ES6"
+        "front-base/ES6",
+        "front-base/html",
+        "front-base/css"
       ]
     }
   ]
