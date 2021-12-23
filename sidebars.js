@@ -121,6 +121,18 @@ const sidebars = {
         "front-base/html",
         "front-base/css"
       ]
+    },
+    {
+      type: "category",
+      label: 'React知识',
+      link: {
+        type: "generated-index"
+      },
+      collapsed: true,
+      collapsible: true,
+      items: [
+        "react/react18"
+      ]
     }
   ]
   // By default, Docusaurus generates a sidebar from the docs folder structure

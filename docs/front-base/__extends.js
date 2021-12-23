@@ -64,3 +64,29 @@ class Cat extends Animal {
 
 const cat = new Cat('汤圆');
 console.log(cat.getName());
+
+// proxy
+const onWatch = (obj, setBind, getLogger) => {
+  const handler = {
+    get(target, property, receiver) {
+      getLogger(target, property);
+      return Reflect.get(target, property, receiver);
+    },
+    set(target, property, value, receiver) {
+      setBind(value, property);
+      return Reflect.set(target, property, value, receiver);
+    }
+  };
+  return new Proxy(obj, handler);
+};
+
+const obj = {a: 1};
+const p = onWatch(obj,
+  (v, property) => {
+    console.log(v, property);
+  },
+  (target, property) => {
+    console.log(target);
+    console.log(property);
+  }
+);
