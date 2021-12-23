@@ -241,4 +241,48 @@ console.log('foo done');
 
 所以将示例1中的导出变为函数导出，那么就不会报错问题，因为函数的状态提升，在foo中引用的时候，函数已经声明了所以不会报错；
 
+## Proxy
+> proxy 是es6新增的一个api, 在Vue3中通过这个功能替换了以前的 `Object.defineProperty`来实现数据的响应式
+
+```javascript
+const p = new Proxy(target, handler);
+```
+
+```javascript
+const onWatch = (obj, setBind, getLogger) => {
+  const handler = {
+    get(target, property, receiver) {
+      getLogger(target, property);
+      return Reflect.get(target, property, receiver);
+    },
+    set(target, property, value, receiver) {
+      setBind(value, property);
+      return Reflect.set(target, property, value, receiver);
+    }
+  };
+  return new Proxy(obj, handler);
+};
+
+const obj = {a: 1};
+const p = onWatch(obj,
+  (v, property) => {
+    console.log(v, property);
+  },
+  (target, property) => {
+    console.log(target);
+    console.log(property);
+  }
+);
+```
+
+## map, filter, reduce
+
+```javascript
+[1, 2, 3].map(parseInt);
+// 第一轮遍历：parseInt(1, 0) => 1
+// 第二次遍历：parseInt(2, 1) => NaN
+// 第三次遍历：parseInt(3, 2) => NaN
+```
+
+
 
