@@ -119,7 +119,8 @@ const sidebars = {
       items: [
         "front-base/ES6",
         "front-base/html",
-        "front-base/css"
+        "front-base/css",
+        "front-base/asynchronous"
       ]
     },
     {
