@@ -4,7 +4,6 @@ const Promise = function (exctor) {
   const _this = this;
   this.status = PENDING;
   this.value = null;
-  this.reason = null;
   this.fulfilledFns = [];
   this.rejectedFns = [];
 
@@ -19,7 +18,7 @@ const Promise = function (exctor) {
   function reject(reason) {
     if (_this.status === PENDING) {
       _this.status = REJECTED;
-      _this.reason = reason;
+      _this.value = reason;
       _this.rejectedFns.map(fn => fn(reason));
     }
   }
@@ -33,11 +32,15 @@ const Promise = function (exctor) {
 };
 
 Promise.prototype.then = function (onFulfilled, onRejected) {
-  if (this.status === FULFILLED) {
+  if (this.status === PENDING) {
     typeof onFulfilled === "function" && this.fulfilledFns.push(onFulfilled);
+    typeof onRejected === "function" && this.rejectedFns.push(onRejected);
+  }
+  if (this.status === FULFILLED) {
+    typeof onFulfilled === "function" && onFulfilled(this.value);
   }
   if (this.status === REJECTED) {
-    typeof onRejected === "function" && this.rejectedFns.push(onRejected);
+    typeof onRejected === "function" && onRejected(this.value);
   }
 };
 

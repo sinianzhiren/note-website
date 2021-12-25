@@ -9,7 +9,22 @@ xxx
 xxx
 
 ## generator
-xxx
+```javascript
+function *foo(x) {
+  const y = 2 * (yield (x + 1));
+  const z = yield (y / 3);
+  return x + y + z;
+}
+
+let it = foo(5);
+console.log(it.next());
+console.log(it.next(12));
+console.log(it.next(13));
+```
+**输出结果**
+> { value: 6, done: false }     
+  { value: 8, done: false }     
+  { value: 42, done: true } 
 
 ## async await
 xxx
@@ -20,7 +35,8 @@ xxx
 ### setInterval
 xxx
 ### requestAnimationFrame
-xxx
+> 首先 requestAnimationFrame 自带函数节流功能，基本可以保证在 16.6 毫秒内只执行一次（不掉帧的情况下），并且该函数的延时效果是精确的，没有其他定时器时间不准的问题，当然你也可以通过该函数来实现 setTimeout。
+  
 ## 面试题解析
 ```javascript
 async function async1() {
