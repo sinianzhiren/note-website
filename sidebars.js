@@ -120,7 +120,9 @@ const sidebars = {
         "front-base/ES6",
         "front-base/html",
         "front-base/css",
-        "front-base/asynchronous"
+        "front-base/asynchronous",
+        "front-base/browser",
+        "front-base/safe",
       ]
     },
     {
