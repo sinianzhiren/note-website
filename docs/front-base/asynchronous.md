@@ -74,3 +74,16 @@ console.log('script end');
 
 ## 参考链接
 > 1. https://blog.csdn.net/baidu_33295233/article/details/79335127
+
+## event Loop（浏览器事件循环）
+> - 首先执行同步代码，这属于宏任务       
+> - 当执行完所有同步代码后，执行栈为空，查询是否有异步代码需要执行       
+> - 执行所有微任务       
+> - 当执行完所有微任务后，如有必要会渲染页面      
+> - 然后开始下一轮 Event Loop，执行宏任务中的异步代码，也就是 setTimeout 中的回调函数
+
+**微任务**包括 process.nextTick ，promise ，MutationObserver。      
+**宏任务**包括 script ， setTimeout ，setInterval ，setImmediate ，I/O ，UI rendering。
+
+## nodejs Event Loop
+
