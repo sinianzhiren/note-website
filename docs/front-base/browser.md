@@ -75,12 +75,13 @@ mc.addEventListener('message', event => {
 > 1. 使用requestAnimationFrame 循环的插入dom, 
 > 2. 虚拟滚动（virtualized scroller）只渲染可视化区域的内容，非可视化区域外部的内容完全不渲染，只有当滚动的时候再去实时的替换；
 
-## 回流和重绘
+## 回流（重排）和重绘
 > - 重绘：当节点的外观发生改变不影响布局，浏览器从新渲染就是重绘，如color变化
 > - 回流：节点的布局或者尺寸发生变化，浏览器重新渲染就是回流；
 
 **回流必定引起重绘，但是重绘不一定，引起回流，回流的成本比重绘的成本更高**
 > - 使用transform代替top/left/bottom/right    
+>   - 原因是：transform会创建一个独立的渲染合成层，并且调用GPU加速渲染；类似合成层的有，`canvas，video，flash，css滤镜等`
 > - 使用 `visibility` 代理 `display: none`, 前者只是重绘，后者会引起回流    
 > - 不要把节点的属性放在循环里面当成一个循环变量；   
 > - 不要使用table布局，一个小的改动都可能引起回流；    

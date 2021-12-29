@@ -134,7 +134,32 @@ const sidebars = {
       collapsed: true,
       collapsible: true,
       items: [
-        "react/react18"
+        "react/react18",
+        "react/hooks"
+      ]
+    },
+    {
+      type: "category",
+      label: 'vue知识',
+      link: {
+        type: "generated-index"
+      },
+      collapsed: true,
+      collapsible: true,
+      items: [
+        "vue/base"
+      ]
+    },
+    {
+      type: "category",
+      label: '前端工程化',
+      link: {
+        type: "generated-index"
+      },
+      collapsible: true,
+      collapsed: true,
+      items: [
+        "webpack/optimization"
       ]
     }
   ]

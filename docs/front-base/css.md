@@ -131,4 +131,23 @@ wp {
 }
 ```
 
+## css中的单位
+### em
+> - 相对于当前元素或者当前元素继承来的字体的宽度；
+> - 相对于谁取决于应用在什么css属性上，如果是font-size 是相对于父元素的字体大小，如果是line-height 相对的是当前元素的字体；
+> - rem 相对于根节点的字体大小；
+>   - 淘宝的 flexible 就是使用的以 rem 为核心;
+> - vh 和 vw 就是视口的相对高度和宽度；
+> - calc 是css的一个计算功能，使得 css 可以通过计算获得；
+> - 百分比(%)
+
+## 移动端适配
+> - meta标签
+```html
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,viewport-fit=cover">
+```
+
+
+
+
 
