@@ -276,13 +276,29 @@ const p = onWatch(obj,
 ```
 
 ## map, filter, reduce
-
 ```javascript
 [1, 2, 3].map(parseInt);
 // 第一轮遍历：parseInt(1, 0) => 1
 // 第二次遍历：parseInt(2, 1) => NaN
 // 第三次遍历：parseInt(3, 2) => NaN
 ```
+
+## 关于setTimeout 和 setInterval 中的this问题
+```javascript
+setTimeout(function() {
+  console.log(this === window) // true
+})
+```
+上述代码在任何时候调用this 都是 指的是 window
+
+**解决办法**
+> 1. 使用箭头函数；
+> 2. 使用闭包解决；(_this = this)
+> 3. 使用`bind`函数；
+
+
+
+
 
 
 
