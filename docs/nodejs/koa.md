@@ -25,6 +25,7 @@ title: koa
 >   - 响应方式
 >       - koa的响应方式是`ctx.body = 'hello world'`, 并且设置后不会立即执行，而是会等待所有的中间件执行完毕后在执行，给了充足的时机对响应内容做处理；
 >       - express 的响应方式是 `res.send()`，调用后立即响应，如果想在上层中间件中做点事情很困难；
+
 **express**
 ```js
 var express = require('express');
