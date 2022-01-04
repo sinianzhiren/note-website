@@ -135,7 +135,8 @@ const sidebars = {
       collapsible: true,
       items: [
         "react/react18",
-        "react/hooks"
+        "react/hooks",
+        "react/skill"
       ]
     },
     {
@@ -147,7 +148,8 @@ const sidebars = {
       collapsed: true,
       collapsible: true,
       items: [
-        "vue/base"
+        "vue/base",
+        "vue/vue-source"
       ]
     },
     {
