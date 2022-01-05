@@ -4,6 +4,7 @@ title: bind,new,call,apply
 
 ## bind
 > 注意：这里bind返回的函数可以通过两种方式执行，1. 直接调用，2. 通过new 操作符；需要加以判断
+
 ```javascript
 Function.prototype.bind = function (ctx, ...params) {
   const fn = this;
