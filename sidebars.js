@@ -91,6 +91,7 @@ const sidebars = {
           items: [
             "data-structure-algorithm/front-algorithm/sort",
             "data-structure-algorithm/front-algorithm/string",
+            "data-structure-algorithm/front-algorithm/recursion"
           ]
         }
       ]
