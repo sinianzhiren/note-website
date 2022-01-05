@@ -63,3 +63,49 @@ new Promise((resolve, reject) => {
   console.log(err);
 });
 ```
+
+## promise.all
+```js
+Promise.all = function (arrayPromise) {
+  if (!Array.isArray(arrayPromise)) {
+    return new Error('参数必须是一个数组');
+  }
+
+  return new Promise(function (resolve, reject) {
+    try {
+      const arrRes = [];
+      for (let i = 0; i < arrayPromise.length; i++) {
+        arrayPromise[i].then(res => {
+          arrRes.push(res);
+          if (arrRes.length === arrayPromise.length) {
+            return resolve(arrRes);
+          }
+        }, reject);
+      }
+    }
+    catch (e) {
+      return reject(e);
+    }
+  })
+};
+```
+
+## promise.race
+```js
+Promise.race = function (arrayPromise) {
+  if (!Array.isArray(arrayPromise)) {
+    return new Error('参数必须是一个数组');
+  }
+
+  return new Promise(function (resolve, reject) {
+    try {
+      for (let i = 0; i < arrayPromise.length; i++) {
+        arrayPromise[i].then(resolve, reject);
+      }
+    }
+    catch (e) {
+      return reject(e);
+    }
+  })
+};
+```
