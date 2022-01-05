@@ -126,3 +126,31 @@ const debounce = function (fn, wait) {
   }
 };
 ```
+
+## eventBus
+```js
+class EventBus {
+  constructor() {
+    this.onList = []
+  }
+  on(name, fn) {   //订阅事件
+    this.onList.push({
+      name,
+      fn
+    })
+  }
+  emit(name, targetVal) {  //发布事件
+    this.onList.forEach((obj, index) => {
+      if (obj.name === name) {
+        obj.fn(targetVal);
+      }
+    })
+  }
+
+  off(name) {
+    const index = this.onList.findIndex(val => val.name === name);
+    if (index > -1) this.onList.splice(index, 1);
+  }
+}
+
+```
