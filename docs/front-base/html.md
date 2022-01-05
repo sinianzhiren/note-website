@@ -32,3 +32,14 @@ const images = document.querySelectorAll("img");
     };
 document.addEventListener("scroll", _.throttle(lazyLoad, 200));
 ```
+
+## 事件代理
+> - e.currentTarget 指向捕获事件的对象； e.target 指向发生这个事件的对象
+> - 下面的示例中经常会把事件绑定到 ul 标签上面，所有 `e.target = li`, `e.currentTarget = ul`
+```jsx harmony
+<ul>
+  <li>1</li>
+  <li>2</li>
+  <li>3</li>
+</ul>
+```

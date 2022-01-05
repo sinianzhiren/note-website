@@ -51,3 +51,53 @@ Function.prototype.bind = function (ctx, ...params) {
     return fn.apply(ctx, params.concat(args));
   }
 };
+
+// 节流函数
+const throttle = function (fn, wait) {
+  let lastTime = Date.now();
+
+  return function (...args) {
+    const now = Date.now();
+    if (now - lastTime > wait) {
+      lastTime = now;
+      fn.apply(this, args);
+    }
+  }
+};
+
+setInterval(throttle(() => {
+  console.log('hello world');
+}, 500), 100);
+
+// 防抖
+const debounce = function (fn, wait) {
+  let timer = null;
+  return function (...args) {
+    if (timer) {
+      clearTimeout(timer);
+    }
+
+    timer = setTimeout(() => {
+      fn.apply(this, args);
+    }, wait);
+  }
+};
+
+debounce(() => {
+  console.log('hello world');
+}, 2000)();
+
+// 函数科里化
+function curry(fn, curArgs) {
+  return function () {
+    let args = Array.from(arguments);
+    if (curArgs !== undefined) {
+      args = args.concat(curArgs);
+    }
+
+    if (args.length < fn.length) {
+      return curry(fn, args);
+    }
+    return fn.apply(this, args);
+  }
+}
