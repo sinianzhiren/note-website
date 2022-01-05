@@ -19,7 +19,6 @@ Function.prototype.bind = function (ctx, ...params) {
 ```
 
 ## call
-
 ```javascript
 Function.prototype.call = function (ctx, ...params) {
   const fn = this;
