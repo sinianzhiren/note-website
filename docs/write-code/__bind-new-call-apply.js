@@ -101,3 +101,29 @@ function curry(fn, curArgs) {
     return fn.apply(this, args);
   }
 }
+
+// deepClone
+const deepClone = function (obj) {
+  let newObj = null;
+  if (obj && typeof obj !== "object") {
+    newObj = obj;
+  }
+
+  if (obj && typeof obj === "object") {
+    newObj = Array.isArray(obj) ? [] : {};
+    for (let key in obj) {
+      if (obj.hasOwnProperty(key)) {
+        // 复杂类型递归遍历
+        if (obj[key] && typeof obj[key] === "object") {
+          newObj[key] = deepClone(obj[key]);
+        }
+        else {
+          // 属性值是普通类型直接赋值
+          newObj[key] = obj[key];
+        }
+      }
+    }
+  }
+  return newObj;
+};
+
