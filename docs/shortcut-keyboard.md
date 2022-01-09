@@ -30,6 +30,7 @@ tags:
 > - shift + cmd + 5 `指定框的截屏或者录屏`
 > - shift + cmd + 4 `自定义截屏`
 > - cmd + ,(逗号) `打开应用的偏好设置`  
+> - command + \`    `一个应用程序多个窗口之间快速切换`      
 > [更多快捷键参考](https://support.apple.com/zh-cn/HT201236)
 
 ## webStorm
