@@ -71,7 +71,7 @@ const config = {
           },
           {to: '/blog', label: '博客', position: 'left'},
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/sinianzhiren/note-website',
             label: 'GitHub',
             position: 'right',
           },
