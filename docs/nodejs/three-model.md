@@ -26,7 +26,6 @@ try {
 ---
 ```javascript
 const globby = require('globby');
-
 (async () => {
   const files = await globby(['a/**/*.js', 'a/**/*.css'], {dot: true});
   console.log(files); // ['a/b/b.js', 'a/a.css']
@@ -38,7 +37,6 @@ const globby = require('globby');
 ---
 ```javascript
 const fse = require('fs-extra');
-
 (async () => {
   // 确认目录是否存在，如果不存在会创建目录
   await fse.ensureDir('./a');
@@ -63,7 +61,6 @@ const fse = require('fs-extra');
 ---
 ```javascript
 const shell = require('shelljs');
-
 if (shell.exec('git init .').code === 0) {
   console.log('git 初始化成功');
 }
@@ -74,7 +71,6 @@ if (shell.exec('git init .').code === 0) {
 ---
 ```javascript
 const spawn = require('cross-spawn');
-
 const child = spawn('npm', ['install'], {stdio: 'inherit'});
 spawn.sync('npm', ['install'], {stdio: 'inherit'}); // 安装全部依赖
 spawn.sync('npm', ['install', 'lodash', '--save'], {stdio: 'inherit'}); // 安装部分依赖
@@ -85,13 +81,11 @@ spawn.sync('npm', ['install', 'lodash', '--save'], {stdio: 'inherit'}); // 安�
 ---
 ```javascript
 const rimraf = require('rimraf');
-
 rimraf('a/b.js', err => {
   if (!err) {
     console.log('删除成功');
   }
 });
-
 // package.json中
 {
   "scripts": {
@@ -112,7 +106,6 @@ rimraf('a/b.js', err => {
 ---
 ```javascript
 const open = require('open');
-
 (async () => {
   await open('http://127.0.0.1:8080');
 })();
@@ -126,7 +119,6 @@ const open = require('open');
 ---
 ```javascript
 const { pathToRegexp } = require('path-to-regexp');
-
 console.log(pathToRegexp('/openapi/:key')); // /^\/openapi(?:\/([^\/#\?]+?))[\/#\?]?$/i
 ```
 
@@ -135,7 +127,6 @@ console.log(pathToRegexp('/openapi/:key')); // /^\/openapi(?:\/([^\/#\?]+?))[\/#
 ---
 ```javascript
 const urlJoin = require('url-join');
-
 console.log(urlJoin('http://www.google.com', 'a', '/b/cd', '?foo=123')); // http://www.google.com/a/b/cd?foo=123
 ```
 
