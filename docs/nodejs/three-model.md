@@ -12,8 +12,7 @@ glob('a/**/*.js', (error, matches) => {
   if (!error) {
     console.log(matches); // [ 'a/a.js', 'a/b/b.js' ]
   }
-})
-
+});
 // 同步方法
 try {
   const matches = glob.sync('a/**/&.js');
