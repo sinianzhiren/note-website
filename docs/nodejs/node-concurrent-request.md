@@ -8,6 +8,7 @@ author: Alex
 ## 代码实现
 > 思路：使用promise 或者 async ... await 封装多个请求的方法，使用promise.all 同时发起并发请求
 > - 下面的代码作者用于爬取 h265 的视频资源的部分代码
+***
 ```javascript
 // 将下载顺序封装在一个 async 方法内
 const asyncFetchTs = (index) => {
