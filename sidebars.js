@@ -176,7 +176,8 @@ const sidebars = {
       items: [
         "nodejs/koa",
         "nodejs/node-concurrent-request",
-        "nodejs/nodejs-model"
+        "nodejs/nodejs-model",
+        "nodejs/three-model",
       ]
     },
     {
