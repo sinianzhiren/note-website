@@ -175,7 +175,8 @@ const sidebars = {
       collapsible: true,
       items: [
         "nodejs/koa",
-        "nodejs/node-concurrent-request"
+        "nodejs/node-concurrent-request",
+        "nodejs/nodejs-model"
       ]
     },
     {
