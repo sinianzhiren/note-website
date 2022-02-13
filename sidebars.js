@@ -174,7 +174,20 @@ const sidebars = {
       collapsed: true,
       collapsible: true,
       items: [
-        "nodejs/koa"
+        "nodejs/koa",
+        "nodejs/node-concurrent-request"
+      ]
+    },
+    {
+      type: "category",
+      label: 'typeScript',
+      link: {
+        type: "generated-index"
+      },
+      collapsed: true,
+      collapsible: true,
+      items: [
+        "typeScript/types"
       ]
     },
     {
