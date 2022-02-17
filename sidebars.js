@@ -137,7 +137,8 @@ const sidebars = {
       items: [
         "react/react18",
         "react/hooks",
-        "react/skill"
+        "react/skill",
+        "react/custom-hooks",
       ]
     },
     {
