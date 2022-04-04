@@ -20,7 +20,8 @@ const sidebars = {
       id: 'shortcut-keyboard',
       label: '快捷键'
     },
-    {
+    /**
+     {
       type: "category",
       label: '基础扩展',
       link: {
@@ -33,7 +34,7 @@ const sidebars = {
         "tutorial-extras/manage-docs-versions"
       ]
     },
-    {
+     {
       type: "category",
       label: '基础教程',
       link: {
@@ -52,6 +53,7 @@ const sidebars = {
         "tutorial-basics/create-a-page"
       ]
     },
+     */
     {
       type: "category",
       label: '数据结构和算法',
