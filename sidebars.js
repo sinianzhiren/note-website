@@ -139,6 +139,7 @@ const sidebars = {
         "react/hooks",
         "react/skill",
         "react/custom-hooks",
+        "react/reactDomApi",
       ]
     },
     {
@@ -164,6 +165,20 @@ const sidebars = {
       collapsed: true,
       items: [
         "webpack/optimization"
+      ]
+    },
+    {
+      type: "category",
+      label: '运维知识',
+      link: {
+        type: "generated-index"
+      },
+      collapsible: true,
+      collapsed: true,
+      items: [
+        "devops/shell",
+        "devops/docker/docker",
+        "devops/docker/docker-compose",
       ]
     },
     {
