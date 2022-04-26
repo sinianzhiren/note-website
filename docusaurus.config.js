@@ -6,9 +6,9 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: '云淡风轻',
+  title: 'aur云淡风轻',
   tagline: '往后余生',
-  url: 'https://your-docusaurus-test-site.com',
+  url: 'https://note-website.vercel.app/',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -57,9 +57,9 @@ const config = {
     ({
       hideableSidebar: true,
       navbar: {
-        title: 'My Blog',
+        title: '',
         logo: {
-          alt: 'My Site Logo',
+          alt: 'blog log',
           src: 'img/logo.svg',
         },
         items: [
