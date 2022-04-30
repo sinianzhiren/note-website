@@ -196,6 +196,7 @@ const sidebars = {
         "nodejs/node-concurrent-request",
         "nodejs/nodejs-model",
         "nodejs/three-model",
+        "nodejs/npm-package-update",
       ]
     },
     {
