@@ -88,6 +88,10 @@ mc.addEventListener('message', event => {
 > - css选择器的匹配是从右到左的规则，应该避免层级过多；   
 
 
+## 前端请求的content-type的4种方式
+> [前端请求的content-type的4种方式区别](https://juejin.cn/post/6844903903520096263)
+
+
 
 
 
