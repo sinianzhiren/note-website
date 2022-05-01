@@ -91,6 +91,8 @@ mc.addEventListener('message', event => {
 ## 前端请求的content-type的4种方式
 > [前端请求的content-type的4种方式区别](https://juejin.cn/post/6844903903520096263)
 
+## webstorm
+> [让webstorm识别UMI以@开头别名的相对路径](https://www.jianshu.com/p/7c138978df2d)
 
 
 
