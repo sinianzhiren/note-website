@@ -201,6 +201,18 @@ const sidebars = {
     },
     {
       type: "category",
+      label: '数据库',
+      link: {
+        type: "generated-index"
+      },
+      collapsed: true,
+      collapsible: true,
+      items: [
+        "dataBase/mysql",
+      ]
+    },
+    {
+      type: "category",
       label: 'typeScript',
       link: {
         type: "generated-index"
