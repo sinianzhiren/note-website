@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'aur云淡风轻',
+  title: '云淡风轻',
   tagline: '往后余生',
   url: 'https://note-website.vercel.app/',
   baseUrl: '/',
