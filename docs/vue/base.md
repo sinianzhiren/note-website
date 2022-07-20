@@ -83,3 +83,14 @@ onMounted(() => {
 </script>
 ```
 
+## nginx 线上部署，刷新后页面 404
+
+> 修改 nginx 配置
+```shell
+location / {
+    root   /usr/share/nginx/dist; # 服务默认启动目录
+    index  index.html index.htm; # 默认访问文件
++    try_files $uri /index.html; # 防止浏览器刷新后，页面404
+    client_max_body_size 100m;
+}
+```
