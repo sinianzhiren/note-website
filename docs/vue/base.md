@@ -48,3 +48,38 @@ this.$emit('add', 'test');
 > - 可以使用template包裹
 
 
+## vue3 和echarts5动态更新数据报错
+
+> barPolar.js:63 Uncaught TypeError: Cannot read properties of undefined (reading 'type')
+
+
+造成报错的原因是 vue3 中使用 proxy 的方式监听响应式，charts 实例会被在 vue 内部转换成响应式对象
+在初始化的时候可以使用markRaw指定为非响应式即可
+
+```js
+<template>
+  <div ref="lineChartDomRef"></div>
+</template>
+
+<script setup>
+import { markRaw, ref, onMounted } from "vue";
+import * as echarts from "echarts";
+
+const lineChartInsRef = ref();
+const lineChartDomRef = ref();
+
+onMounted(() => {
+  // 初始化时使用markRaw，后面使用lineChartInsRef.value实例更新时，就不会报错了
+  const option = {
+    // ...
+  };
+  lineChartInsRef.value = markRaw(echarts.init(lineChartDomRef.value));
+  lineChartInsRef.value.setOption(option);
+
+  window.addEventListener("resize", () => {
+    lineChartInsRef.value.resize();
+  });
+});
+</script>
+```
+
