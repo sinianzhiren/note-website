@@ -2,11 +2,64 @@
 title: Vue基础
 ---
 
-## v-if 和 v-show
+## class 与 style绑定
+```vue
+<div :class="{active: isActive}"></div>
+data() {
+  return {
+    isActive: true
+  }
+}
+
+<div :class="[activeClass, errorClass]"></div>
+<div :class="[isActive ? activeClass : '', errorClass]"></div>
+<div :class="[{ active: isActive }, errorClass]"></div>
+```
+
+### 和组件配合
+```vue
+<!-- 子组件模板 -->
+<p class="foo bar">Hi!</p>
+<!-- 在使用组件时 -->
+<my-component class="baz boo"></my-component>
+<!-- 渲染出的结果 -->
+<p class="foo bar baz boo">Hi</p>
+```
+### style
+```vue
+<div :style="styleObject"></div>
+data() {
+    return {
+        styleObject: {
+            color: 'red',
+            fontSize: '13px'
+        }
+    }
+}
+<!-- 绑定数组， baseStyles， overridingStyles 是对象 -->
+<div :style="[baseStyles, overridingStyles]"></div>
+```
 
 
 ## v-for 和 v-if
 > - 不同同时作用在同一个HTML元素上
+
+```vue
+data() {
+    return {
+        parentMessage: 'Parent',
+        items: [{ message: 'Foo' }, { message: 'Bar' }]
+    }
+}
+<!-- 遍历的是数组 -->
+<li v-for="(item, index) in items">
+  {{ parentMessage }} - {{ index }} - {{ item.message }}
+</li>
+<!-- 遍历的是对象  -->
+<li v-for="(value, key, index) in myObject">
+{{ index }}. {{ key }}: {{ value }}
+</li>
+```
 
 ## vue事件event
 ```vue
