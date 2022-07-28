@@ -154,7 +154,8 @@ const sidebars = {
       collapsible: true,
       items: [
         "vue/base",
-        "vue/vue-source"
+        "vue/vue-source",
+        "vue/vue-msg"
       ]
     },
     {
