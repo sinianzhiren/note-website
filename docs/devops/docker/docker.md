@@ -13,3 +13,5 @@ title: docker的基础知识
 > - [nodejs 操作docker的库](https://github.com/apocas/dockerode)
 > - [nodejs 操作docker-compose的库](https://github.com/apocas/dockerode-compose)
 > - [使用dotenv 管理nodejs 应用的环境变量&&docker-compose 运行](https://blog.51cto.com/rongfengliang/3124678)
+> - [docker 批量删除容器和镜像](https://blog.csdn.net/wulex/article/details/120257730)
+> - [ocker容器启动失败查看日志](https://blog.csdn.net/hshloveyy/article/details/123408311)
