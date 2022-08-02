@@ -147,3 +147,59 @@ location / {
     client_max_body_size 100m;
 }
 ```
+
+## watchEffect vs watch
+> 1. watchEffect 会自动监听回调内部的依赖变量，依赖发生变化的时候都会执行
+回调函数，watchEffect 执行后会返回一个函数，这个函数可以取消监听。如果监听的是一个ref dom
+那么当dom未挂载之前会执行一次，当dom挂载上去也会执行一次，解决办法是：{flush: "post"}
+> 2. 当检测到当前监听的对象是 reactive 的时候会自动设置 {deep: true} 
+> 3. watch设置 immediate:true 就是当页面刚渲染时，就立即执行。此时oldValue为undefined。
+
+```vue
+const cancelWatch = watchEffect((onInvalidate) => {
+  let timer = setTimeout(() => {
+    console.log('hi')
+  }, 2000);
+  onInvalidate(() => { // 清除副作用
+    clearTimeout(timer);
+    console.log('执行回调函数');
+  })
+})
+
+cancelWatch(); // 取消监听
+```
+
+## 自定义指令
+```vue
+// 父组件 App.vue
+> - 内容首字母转换为大写显示
+
+<script setup>
+import vInput from './vInput.vue';
+import { ref } from 'vue';
+const value = ref('');
+</script>
+
+<template>
+  <v-input v-model.capitalize="value" />
+</template>
+
+// 子组件  vInput.vue
+<script setup>
+import { defineProps, defineEmits } from 'vue';
+const props = defineProps(['modelValue', 'modelModifiers']);
+const emit = defineEmits(['update:modelValue']);
+
+function emitValue(e) {
+  let value = e.target.value;
+  if (props.modelModifiers.capitalize) {
+    value = value.charAt(0).toUpperCase() + value.slice(1);
+  }
+  emit('update:modelValue', value);
+}
+</script>
+
+<template>
+  <input type="text" :value="modelValue" @input="emitValue" />
+</template>
+```
