@@ -16,9 +16,9 @@ const sidebars = {
   docs: [
     "intro",
     {
-      type: 'doc',
-      id: 'shortcut-keyboard',
-      label: '快捷键'
+      type: "doc",
+      id: "shortcut-keyboard",
+      label: "快捷键",
     },
     /**
      {
@@ -56,11 +56,11 @@ const sidebars = {
      */
     {
       type: "category",
-      label: '数据结构和算法',
+      label: "数据结构和算法",
       link: {
         type: "generated-index",
-        title: '数据结构和算法',
-        description: '记录前端常见的数据结构和算法'
+        title: "数据结构和算法",
+        description: "记录前端常见的数据结构和算法",
       },
       collapsed: true,
       collapsible: true,
@@ -68,10 +68,10 @@ const sidebars = {
         "data-structure-algorithm/learn",
         {
           type: "category",
-          label: '数据结构',
+          label: "数据结构",
           link: {
-            type: 'doc',
-            id: 'data-structure-algorithm/data-structure/index'
+            type: "doc",
+            id: "data-structure-algorithm/data-structure/index",
           },
           collapsed: true,
           collapsible: true,
@@ -79,43 +79,40 @@ const sidebars = {
             "data-structure-algorithm/data-structure/array",
             "data-structure-algorithm/data-structure/binary-tree",
             "data-structure-algorithm/data-structure/stack",
-          ]
+          ],
         },
         {
           type: "category",
-          label: '前端算法',
+          label: "前端算法",
           link: {
             type: "doc",
-            id: 'data-structure-algorithm/front-algorithm/index'
+            id: "data-structure-algorithm/front-algorithm/index",
           },
           collapsible: true,
           collapsed: true,
           items: [
             "data-structure-algorithm/front-algorithm/sort",
             "data-structure-algorithm/front-algorithm/string",
-            "data-structure-algorithm/front-algorithm/recursion"
-          ]
-        }
-      ]
+            "data-structure-algorithm/front-algorithm/recursion",
+          ],
+        },
+      ],
     },
     {
       type: "category",
-      label: '手写代码',
+      label: "手写代码",
       link: {
-        type: "generated-index"
+        type: "generated-index",
       },
       collapsed: true,
       collapsible: true,
-      items: [
-        "write-code/promise",
-        "write-code/call-bind-new-apply"
-      ]
+      items: ["write-code/promise", "write-code/call-bind-new-apply"],
     },
     {
       type: "category",
-      label: '前端基础',
+      label: "前端基础",
       link: {
-        type: "generated-index"
+        type: "generated-index",
       },
       collapsible: true,
       collapsed: true,
@@ -126,13 +123,13 @@ const sidebars = {
         "front-base/asynchronous",
         "front-base/browser",
         "front-base/safe",
-      ]
+      ],
     },
     {
       type: "category",
-      label: 'React知识',
+      label: "React知识",
       link: {
-        type: "generated-index"
+        type: "generated-index",
       },
       collapsed: true,
       collapsible: true,
@@ -142,39 +139,34 @@ const sidebars = {
         "react/skill",
         "react/custom-hooks",
         "react/reactDomApi",
-      ]
+        "react/nextjs",
+      ],
     },
     {
       type: "category",
-      label: 'vue知识',
+      label: "vue知识",
       link: {
-        type: "generated-index"
+        type: "generated-index",
       },
       collapsed: true,
       collapsible: true,
-      items: [
-        "vue/base",
-        "vue/vue-source",
-        "vue/vue-msg"
-      ]
+      items: ["vue/base", "vue/vue-source", "vue/vue-msg"],
     },
     {
       type: "category",
-      label: '前端工程化',
+      label: "前端工程化",
       link: {
-        type: "generated-index"
+        type: "generated-index",
       },
       collapsible: true,
       collapsed: true,
-      items: [
-        "webpack/optimization"
-      ]
+      items: ["webpack/optimization"],
     },
     {
       type: "category",
-      label: '运维知识',
+      label: "运维知识",
       link: {
-        type: "generated-index"
+        type: "generated-index",
       },
       collapsible: true,
       collapsed: true,
@@ -182,13 +174,13 @@ const sidebars = {
         "devops/shell",
         "devops/docker/docker",
         "devops/docker/docker-compose",
-      ]
+      ],
     },
     {
       type: "category",
-      label: 'nodejs',
+      label: "nodejs",
       link: {
-        type: "generated-index"
+        type: "generated-index",
       },
       collapsed: true,
       collapsible: true,
@@ -198,45 +190,39 @@ const sidebars = {
         "nodejs/nodejs-model",
         "nodejs/three-model",
         "nodejs/npm-package-update",
-      ]
+      ],
     },
     {
       type: "category",
-      label: '数据库',
+      label: "数据库",
       link: {
-        type: "generated-index"
+        type: "generated-index",
       },
       collapsed: true,
       collapsible: true,
-      items: [
-        "dataBase/mysql",
-      ]
+      items: ["dataBase/mysql"],
     },
     {
       type: "category",
-      label: 'typeScript',
+      label: "typeScript",
       link: {
-        type: "generated-index"
+        type: "generated-index",
       },
       collapsed: true,
       collapsible: true,
-      items: [
-        "typeScript/types"
-      ]
+      items: ["typeScript/types"],
     },
     {
       type: "category",
-      label: '非技术问题',
+      label: "非技术问题",
       link: {
-        type: "generated-index"
+        type: "generated-index",
       },
       collapsed: true,
       collapsible: true,
-      items: [
-        "other-problem/distribution"
-      ]
+      items: ["other-problem/distribution"],
     },
-  ]
+  ],
   // By default, Docusaurus generates a sidebar from the docs folder structure
   // tutorialSidebar: [{type: 'autogenerated', dirName: '.'}],
 
