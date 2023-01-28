@@ -140,6 +140,7 @@ const sidebars = {
         "react/custom-hooks",
         "react/reactDomApi",
         "react/nextjs",
+        "react/css-input",
       ],
     },
     {
