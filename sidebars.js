@@ -123,6 +123,7 @@ const sidebars = {
         "front-base/asynchronous",
         "front-base/browser",
         "front-base/safe",
+        "front-base/git",
       ],
     },
     {
