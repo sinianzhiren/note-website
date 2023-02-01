@@ -212,7 +212,7 @@ const sidebars = {
       },
       collapsed: true,
       collapsible: true,
-      items: ["typeScript/types"],
+      items: ["typeScript/types", "typeScript/react-ts"],
     },
     {
       type: "category",
