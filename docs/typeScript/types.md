@@ -118,6 +118,7 @@ const sum2: (x: number, y: number) => number = function (x: number, y: number): 
 ```typescript
 interface IFn {
   (x: number, y: number): number;
+  getName(): string;
 }
 let myFn: IFn = function (x:number, y: number): number {
   return x + y;
