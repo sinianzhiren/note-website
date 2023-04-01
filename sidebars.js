@@ -124,6 +124,7 @@ const sidebars = {
         "front-base/browser",
         "front-base/safe",
         "front-base/git",
+        "front-base/DOM_BOM",
       ],
     },
     {

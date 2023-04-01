@@ -40,3 +40,5 @@ function isString(x: any): x is string {
 }
 ```
 
+### 5. switch 和 case 
+
