@@ -92,6 +92,7 @@ function curry(fn, curArgs) {
 
 ## 节流
 > 防抖是最后一个执行事件才会触发函数，节流在一定时间内会触发函数。
+
 ```js
 // 节流函数
 const throttle = function (fn, wait) {
@@ -113,6 +114,7 @@ setInterval(throttle(() => {
 
 ## 防抖
 > 防抖是最后一个执行事件才会触发函数，节流在一定时间内会触发函数。
+
 ```js
 // 防抖
 const debounce = function (fn, wait) {
@@ -130,6 +132,7 @@ const debounce = function (fn, wait) {
 ```
 
 ## eventBus
+
 ```js
 class EventBus {
   constructor() {
@@ -157,6 +160,7 @@ class EventBus {
 ```
 
 ## setTimeout模拟setInterval
+
 ```js
 function mySetInterval(fn, wait) {
   function interval() {
@@ -168,6 +172,7 @@ function mySetInterval(fn, wait) {
 ```
 
 ## 手写深拷贝
+
 ```js
 const deepClone = function (obj) {
   let newObj = null;
