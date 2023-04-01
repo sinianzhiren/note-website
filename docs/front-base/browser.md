@@ -85,8 +85,7 @@ mc.addEventListener('message', event => {
 > - 使用 `visibility` 代理 `display: none`, 前者只是重绘，后者会引起回流    
 > - 不要把节点的属性放在循环里面当成一个循环变量；   
 > - 不要使用table布局，一个小的改动都可能引起回流；    
-> - css选择器的匹配是从右到左的规则，应该避免层级过多；   
-
+> - css选择器的匹配是从右到左的规则，应该避免层级过多；
 
 ## 前端请求的content-type的4种方式
 > [前端请求的content-type的4种方式区别](https://juejin.cn/post/6844903903520096263)
